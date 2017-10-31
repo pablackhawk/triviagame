@@ -6,13 +6,36 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link href="https://fonts.googleapis.com/css?family=Cabin|Yanone+Kaffeesatz" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/app.js"></script>
 </head>
 <body>
 	<div class="header">
 		<h1>Welcome to the Sci-Fi Trivia Extravaganza!</h1>
 	</div>
-	<div class="body">
+	<div class="content">
+		<div id="info">
+			<h2>Test your Sci-Fi knowledge and be crowned the monarch of all nerddom!</h2>
+			<p> Answer the questions below before time runs out!</p> 
+			<p>Think quickly or you might get tossed into the Neutral zone!</p>
+		</div>
 		<div id="game"></div>
+		<div id="timer"></div>
+		<div id="question"></div>
+		<div class="answers">
+			<div>
+				<button class="choice" id="A"><h4>A</h4></button>
+			</div>
+			<div>
+				<button class="choice" id="B"><h4>B</h4></button>
+			</div>
+			<div>
+				<button class="choice" id="C"><h4>C</h4></button>
+			</div>
+			<div>
+				<button class="choice" id="D"><h4>D</h4></button>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

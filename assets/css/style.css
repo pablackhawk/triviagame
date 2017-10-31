@@ -4,8 +4,9 @@
 
 body {
 	background-image: url("../images/stardust.png");
-	color: hsl(0,0%,80%);
+	color: hsl(0,0%,95%);
 	font-family: 'Yanone Kaffeesatz', sans-serif;
+	margin:0, auto;
 }
 
 h1, h2, h3 {
@@ -16,16 +17,54 @@ h1, h2, h3 {
 h1 {
 	font-size: 30px;
 	padding-top: 5%;
+	line-height: 1.3;
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 18px;
+	line-height: 1.4;
 }
 
 h3 {
-	font-size: 22px;
+	font-size: 16px;
 }
 
 p {
 	font-size: 18px;
+	line-height: 1.2;
+}
+
+button {
+	color: hsl(0,0%,95%);
+	width: 80%;
+	height: 30px;
+	margin: 0 10%;
+	float: left;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+button.answerchoice {
+	display: none;
+}
+
+button:hover {
+	background: lightblue;
+	color: black;
+}
+
+.content {
+	margin:1% 10% 0% 10%;
+	padding:2% 5%;
+	height: 430px;
+	
+}
+
+#info {
+	margin: 2% auto;
+	text-align: center;
+	
+}
+
+#game {
+	height: 300px;
 }
