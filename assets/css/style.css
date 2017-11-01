@@ -37,6 +37,7 @@ p {
 button {
 	color: hsl(0,0%,95%);
 	background: royalblue;
+	font-size: 18px;
 	width: 80%;
 	height: 30px;
 	margin: 0 10%;
@@ -68,4 +69,9 @@ button:hover {
 
 #game {
 	height: 300px;
+}
+
+.answers {
+	position: relative;
+	top: 5px;
 }
