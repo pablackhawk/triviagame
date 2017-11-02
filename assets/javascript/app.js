@@ -158,6 +158,15 @@ $(document).ready(function(){
 			$("#buttonE").text(questions[qSelection].multipleChoice[4]).show();
 		}
 
+		function gameReset() {
+			index = 0;
+			$("#resetButton").on("click", function() {
+				$("#resetButton").hide();
+				$(".answers").show();
+				timer.start();
+				loadQuestion(index);
+			})
+		}
 
 		function gameStart () {
 			index = 0;
@@ -266,7 +275,8 @@ $(document).ready(function(){
 		 } else {
 		 	$(".answers").hide();
 		 	showScore();
-		 	
+		 	$(".question").append('<button id="resetButton">Play Again?</Button>');
+		 	$("#resetButton").on('click', gameReset());
 		 }
 	});
 
