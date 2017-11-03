@@ -8,9 +8,9 @@ $(document).ready(function(){
 		incorrect = 0;
 	//timer
 	var timer = { 
-		time: 30,
+		time: 15,
 		reset: function() {
-			this.time = 30;
+			this.time = 15;
 			$(".clock").html("<h3>" + this.time + " seconds remaining</h3>");
 		},
 
