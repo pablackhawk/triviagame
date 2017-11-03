@@ -71,6 +71,11 @@ button:hover {
 	height: 300px;
 }
 
+.question {
+	position: relative;
+	top: 1%;
+	margin: 1% auto;
+}
 .answers {
 	position: relative;
 	top: 5px;
