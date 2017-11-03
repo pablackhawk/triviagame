@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$(".answers").hide();
+
 	//Initial variables
 	var index = 0,
 		correct = 0,
@@ -147,7 +149,26 @@ $(document).ready(function(){
 		};
 
 	var questions = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15];
+		
 
+		function shuffle(array) {
+		  var currentIndex = questions.length, temporaryValue, randomIndex;
+
+		  // While there remain elements to shuffle...
+		  while (0 !== currentIndex) {
+
+		    // Pick a remaining element...
+		    randomIndex = Math.floor(Math.random() * currentIndex);
+		    currentIndex -= 1;
+
+		    // And swap it with the current element.
+		    temporaryValue = array[currentIndex];
+		    array[currentIndex] = array[randomIndex];
+		    array[randomIndex] = temporaryValue;
+		  }
+
+		  return array;
+		}
 		function loadQuestion(qSelection) {
 			timer.reset();
 			$(".question").html("<h3>" + questions[qSelection].question + "</h3>");
@@ -160,6 +181,7 @@ $(document).ready(function(){
 
 		function gameReset() {
 			index = 0;
+			shuffle(questions);
 			$("#resetButton").on("click", function() {
 				$("#resetButton").hide();
 				$(".answers").show();
@@ -170,9 +192,11 @@ $(document).ready(function(){
 
 		function gameStart () {
 			index = 0;
+			shuffle(questions);
 			$(".question").append('<button id="startButton">Start</Button>');
 			$("#startButton").on('click', function() {
 				$(this).hide();
+				$(".answers").show();
 				timer.start();
 				loadQuestion(index);
 			});
