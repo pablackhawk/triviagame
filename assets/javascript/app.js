@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 			else {
 				index++;
-				wrongAnswer();
+				answeIncorrect();
 				timer.reset();
 				if (index < questions.length) {
 					loadQuestion(index);
@@ -219,13 +219,13 @@ $(document).ready(function(){
 
 		function answerCorrect() {
 			correct++;
-			alert("Correct!");
+			alert("Correct! " + questions[index].answer);
 			console.log("correct");
 		}
 
 		function answerIncorrect(){
 			incorrect++;
-			alert("Incorrect");
+			alert("Incorrect. Correct answer is: " + questions[index].answer);
 			console.log("incorrect");
 		}
 
